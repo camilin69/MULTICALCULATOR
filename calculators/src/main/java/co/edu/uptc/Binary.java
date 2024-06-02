@@ -11,22 +11,22 @@ public class Binary{
     public String difference(String a, String b) {
         int num1 = Integer.parseInt(a, 2);
         int num2 = Integer.parseInt(b, 2);
-        int sum = num1 - num2;
-        return Integer.toBinaryString(sum);
+        int difference = num1 - num2;
+        return Integer.toBinaryString(difference);
     }
 
     public String product(String a, String b) {
         int num1 = Integer.parseInt(a, 2);
         int num2 = Integer.parseInt(b, 2);
-        int sum = num1 + num2;
-        return Integer.toBinaryString(sum);
+        int product = num1 * num2;
+        return Integer.toBinaryString(product);
     }
 
     public String division(String a, String b) {
         int num1 = Integer.parseInt(a, 2);
         int num2 = Integer.parseInt(b, 2);
-        int sum = num1 / num2;
-        return Integer.toBinaryString(sum);
+        int division = num1 / num2;
+        return Integer.toBinaryString(division);
     }
 
     
