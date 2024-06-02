@@ -5,6 +5,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
+import co.edu.uptc.Hexa;
 
 
 /**
@@ -20,7 +21,11 @@ public class App extends Application {
     }
 
     public static void main(String[] args) {
-        launch();
+        //launch();
+        Hexa h = new Hexa();
+        String a = "2FFFF";
+        String b = "321";
+        System.out.println("División: " + h.division(a, b));
     }
 
 }
