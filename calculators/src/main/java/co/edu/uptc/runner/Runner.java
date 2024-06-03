@@ -1,4 +1,4 @@
-package co.edu.uptc;
+package co.edu.uptc.runner;
 
 import java.io.IOException;
 
@@ -13,13 +13,13 @@ import javafx.fxml.FXMLLoader;
 /**
  * JavaFX App
  */
-public class App extends Application{
+public class Runner extends Application{
 
     @Override
     public void start(Stage stage) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("calculator.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/co/edu/uptc/control/calculator.fxml"));
         Scene scene = new Scene(root);
-        Image icon = new Image(getClass().getResourceAsStream("stageicon.jpg"));
+        Image icon = new Image(getClass().getResourceAsStream("/co/edu/uptc/control/stageicon.jpg"));
         stage.getIcons().add(icon);
         stage.setTitle("Multi Calculator");
         stage.setScene(scene);

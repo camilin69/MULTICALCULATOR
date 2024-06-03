@@ -1,4 +1,4 @@
-package co.edu.uptc;
+package co.edu.uptc.model;
 
 public class Hexa extends Expression{
     public String sum(String a, String b) {

@@ -1,4 +1,4 @@
-package co.edu.uptc;
+package co.edu.uptc.model;
 
 public abstract class Expression {
     public abstract String sum(String a, String b);

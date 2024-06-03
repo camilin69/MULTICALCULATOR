@@ -1,5 +1,9 @@
-package co.edu.uptc;
+package co.edu.uptc.control;
 
+import co.edu.uptc.model.Binary;
+import co.edu.uptc.model.Expression;
+import co.edu.uptc.model.Hexa;
+import co.edu.uptc.model.Octal;
 import javafx.animation.FadeTransition;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;

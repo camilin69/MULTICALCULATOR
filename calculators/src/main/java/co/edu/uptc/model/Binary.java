@@ -1,4 +1,4 @@
-package co.edu.uptc;
+package co.edu.uptc.model;
 
 public class Binary extends Expression{
 

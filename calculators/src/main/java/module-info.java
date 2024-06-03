@@ -3,5 +3,6 @@ module co.edu.uptc {
     requires javafx.graphics;
     requires javafx.media;
     requires javafx.fxml;
-    opens co.edu.uptc;
+    opens co.edu.uptc.control;
+    opens co.edu.uptc.runner;
 }
