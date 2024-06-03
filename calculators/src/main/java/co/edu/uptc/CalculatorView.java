@@ -1,7 +1,9 @@
 package co.edu.uptc;
 
-import java.lang.reflect.Field;
-
+import javafx.animation.FadeTransition;
+import javafx.animation.KeyFrame;
+import javafx.animation.Timeline;
+import javafx.animation.TranslateTransition;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
 import javafx.scene.control.Label;
@@ -9,10 +11,11 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
-import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
+import javafx.scene.text.Font;
+import javafx.util.Duration;
 
 public class CalculatorView {
     private String ON_MOUSE_ENTERED_COLOR = "#937bbc";
@@ -53,7 +56,6 @@ public class CalculatorView {
             }
         }
         griddys.setOnMouseEntered(null);
-        System.out.println("NIGGAAAAA GRIDDYS");
     }
 
     private void highlightGrids(StackPane n){
@@ -124,13 +126,21 @@ public class CalculatorView {
     @FXML
     void addOperationField(MouseEvent event){
         StackPane stack = (StackPane) event.getSource();
-        if(operationField.getText().length() < 44){
+        if(operationField.getText().length() >= 32 && operationField.getFont().getSize() > 30){
+            operationField.setFont(new Font("Gill Sans MT", operationField.getFont().getSize() - 2));
+        }
+        
+        if(operationField.getText().length() < 90){
             operationField.setText(operationField.getText() + ((Label) stack.getChildren().get(1)).getText());
         }
-    }
 
+    }
+//18 result
     @FXML
     void remove(MouseEvent event){
+        if(operationField.getText().length() <= 40 && operationField.getFont().getSize() < 66){
+            operationField.setFont(new Font("Gill Sans MT", operationField.getFont().getSize() + 2));
+        }
         if(operationField.getText().length() > 0){
             operationField.setText(operationField.getText().substring(0, operationField.getText().length() - 1));  
         }
@@ -138,9 +148,47 @@ public class CalculatorView {
 
     @FXML
     void calculate(MouseEvent event){
-        System.out.println("CALCULATING");
+        Expression expression;
+        if(binaryGrid.isVisible()){
+            expression = new Binary();
+        }else if(octalGrid.isVisible()){
+            expression = new Octal();
+        }else{
+            expression = new Hexa();
+        }
+        try{
+            resultField.setFont(new Font("Gill Sans MT", 60));
+            String result = HandlingCalculator.evaluate(expression, operationField.getText());
+            if(result.length() > 18 && result.length() < 30 ){
+                resultField.setFont(new Font("Gill Sans MT", 40));
+            }else if(result.length() >= 30 && result.length() < 50 ){
+                resultField.setFont(new Font("Gill Sans MT", 30));
+            }else if(result.length() >= 50 && result.length() < 70 ){
+                resultField.setFont(new Font("Gill Sans MT", 20));
+            }else if(result.length() >= 70 && result.length() < 100 ){
+                resultField.setFont(new Font("Gill Sans MT", 15));
+            }
+            resultField.setText("= " + result);
+            
+        }catch (IllegalArgumentException e) {
+            System.err.println(e.getMessage()); 
+            operationField.setStyle("-fx-background-color: #ff8b8b;");
+            Timeline error = new Timeline(new KeyFrame(Duration.millis(250), k ->{
+                operationField.setStyle("-fx-background-color: transparent;");
+            }));
+            FadeTransition fadeTransition = new FadeTransition(Duration.millis(250), operationField);
+            fadeTransition.setFromValue(1); 
+            fadeTransition.setToValue(0);   
+            fadeTransition.setAutoReverse(true); 
+            fadeTransition.setCycleCount(2); 
+            TranslateTransition earthquake = new TranslateTransition(Duration.millis(5), operationField);
+            earthquake.setByX(3);
+            earthquake.setFromX(0);
+            earthquake.setAutoReverse(true);
+            earthquake.setCycleCount(100);
+            earthquake.play();
+            error.play();
+            fadeTransition.play();
+        }
     }
-
-
-
 }
