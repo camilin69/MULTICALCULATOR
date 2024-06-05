@@ -10,9 +10,6 @@ import javafx.stage.Stage;
 import javafx.fxml.FXMLLoader;
 
 
-/**
- * JavaFX App
- */
 public class Runner extends Application{
 
     @Override
@@ -20,6 +17,7 @@ public class Runner extends Application{
         Parent root = FXMLLoader.load(getClass().getResource("/co/edu/uptc/control/calculator.fxml"));
         Scene scene = new Scene(root);
         Image icon = new Image(getClass().getResourceAsStream("/co/edu/uptc/control/stageicon.jpg"));
+        stage.setResizable(false);
         stage.getIcons().add(icon);
         stage.setTitle("Multi Calculator");
         stage.setScene(scene);

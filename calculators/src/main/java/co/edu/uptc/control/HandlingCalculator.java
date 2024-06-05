@@ -35,10 +35,10 @@ public class HandlingCalculator {
                     }
                     operators.pop(); 
                 } else if (c == '+' || c == '-' || c == 'x' || c == '/') {
-                    while (!operators.isEmpty() && hasPrecedence(c, operators.peek())) {
+                    while (!operators.isEmpty() && hasPrecedence(operators.peek(), c)) {
                         numbers.push(applyOperation(ex, operators.pop(), numbers.pop(), numbers.pop()));
                     }
-                    operators.push(c);
+                        operators.push(c);
                 } else {
                     throw new IllegalArgumentException("Invalid Char in: " + c);
                 }
@@ -70,15 +70,21 @@ public class HandlingCalculator {
     }
 
     private static boolean hasPrecedence(char op1, char op2) {
-        return (op2 != '(' && op2 != ')') && ((op1 == 'x' || op1 == '/') || (op2 == '+' || op2 == '-'));
+        return (op1 != '(' && op1 != ')') && ((op1 == 'x' || op1 == '/') || (op2 == '+' || op2 == '-'));
     }
 
     private static boolean isValidExpression(String expression) {
         Stack<Character> stack = new Stack<>();
-        for (char c : expression.toCharArray()) {
-            if (c == '(') {
-                stack.push(c);
-            } else if (c == ')') {
+        for(int i = 0; i < expression.toCharArray().length; i++){
+            if(expression.toCharArray()[i] == '('){
+                if(!(i > 0 && expression.toCharArray()[i - 1] == '+'
+                         || expression.toCharArray()[i - 1] == '-'
+                         || expression.toCharArray()[i - 1] == 'x'
+                         || expression.toCharArray()[i - 1] == '/')){
+                            return false;
+                        }
+                stack.push(expression.toCharArray()[i]);
+            }else if (expression.toCharArray()[i] == ')') {
                 if (stack.isEmpty()) {
                     return false;
                 }

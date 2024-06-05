@@ -92,11 +92,11 @@ public class CalculatorView {
 
     @FXML
     void binaryOp(MouseEvent event) {
-        binaryStack.setStyle("-fx-background-color: " + ON_MOUSE_ENTERED_COLOR + "; -fx-background-radius: 50px;");
+        binaryStack.setStyle("-fx-background-color: " + ON_MOUSE_ENTERED_COLOR + ";");
         binaryGrid.setVisible(true);
-        octalStack.setStyle("-fx-background-color: " + ON_MOUSE_EXITED_COLOR + "; -fx-background-radius: 50px;");
+        octalStack.setStyle("-fx-background-color: " + ON_MOUSE_EXITED_COLOR + ";");
         octalGrid.setVisible(false);
-        hexaStack.setStyle("-fx-background-color: " + ON_MOUSE_EXITED_COLOR + "; -fx-background-radius: 50px;");
+        hexaStack.setStyle("-fx-background-color: " + ON_MOUSE_EXITED_COLOR + ";");
         hexaGrid.setVisible(false);
         operationField.setText(""); 
         resultField.setText("=");
@@ -105,11 +105,11 @@ public class CalculatorView {
 
     @FXML
     void octalOp(MouseEvent event) {
-        binaryStack.setStyle("-fx-background-color: " + ON_MOUSE_EXITED_COLOR + "; -fx-background-radius: 50px;");
+        binaryStack.setStyle("-fx-background-color: " + ON_MOUSE_EXITED_COLOR + ";");
         binaryGrid.setVisible(false);
-        octalStack.setStyle("-fx-background-color: " + ON_MOUSE_ENTERED_COLOR + "; -fx-background-radius: 50px;");
+        octalStack.setStyle("-fx-background-color: " + ON_MOUSE_ENTERED_COLOR + ";");
         octalGrid.setVisible(true);
-        hexaStack.setStyle("-fx-background-color: " + ON_MOUSE_EXITED_COLOR + "; -fx-background-radius: 50px;");
+        hexaStack.setStyle("-fx-background-color: " + ON_MOUSE_EXITED_COLOR + ";");
         hexaGrid.setVisible(false);
         operationField.setText(""); 
         resultField.setText("=");
@@ -117,11 +117,11 @@ public class CalculatorView {
     
     @FXML
     void hexaOp(MouseEvent event) {
-        binaryStack.setStyle("-fx-background-color: " + ON_MOUSE_EXITED_COLOR + "; -fx-background-radius: 50px;");
+        binaryStack.setStyle("-fx-background-color: " + ON_MOUSE_EXITED_COLOR + ";");
         binaryGrid.setVisible(false);
-        octalStack.setStyle("-fx-background-color: " + ON_MOUSE_EXITED_COLOR + "; -fx-background-radius: 50px;");
+        octalStack.setStyle("-fx-background-color: " + ON_MOUSE_EXITED_COLOR + ";");
         octalGrid.setVisible(false);
-        hexaStack.setStyle("-fx-background-color: " + ON_MOUSE_ENTERED_COLOR + "; -fx-background-radius: 50px;");
+        hexaStack.setStyle("-fx-background-color: " + ON_MOUSE_ENTERED_COLOR + ";");
         hexaGrid.setVisible(true);
         operationField.setText(""); 
         resultField.setText("=");

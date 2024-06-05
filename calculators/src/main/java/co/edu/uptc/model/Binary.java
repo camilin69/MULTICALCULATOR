@@ -32,7 +32,6 @@ public class Binary extends Expression{
     }
 
     private String toBinaryString(int num) {
-        // Si el número es negativo, lo convertimos a su representación en complemento a 2
         if (num < 0) {
             return "-" + Integer.toBinaryString(-num);
         } else {
