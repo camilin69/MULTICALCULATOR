@@ -151,6 +151,12 @@ public class CalculatorView {
     }
 
     @FXML
+    void allClear(MouseEvent event){
+        operationField.setText(""); 
+        resultField.setText("=");
+    }
+    
+    @FXML
     void calculate(MouseEvent event){
         Expression expression;
         if(binaryGrid.isVisible()){
