@@ -31,11 +31,18 @@ public class Binary extends Expression{
         return toBinaryString(division);
     }
 
+    public String pow(String a, String b) {
+        int num1 = Integer.parseInt(a, 2);
+        int num2 = Integer.parseInt(b, 2);
+        int pow = (int) Math.pow(num1, num2);
+        return toBinaryString(pow);
+    }
+
     private String toBinaryString(int num) {
         if (num < 0) {
-            return "-" + Integer.toBinaryString(-num);
+            return "-" + Long.toBinaryString(-num);
         } else {
-            return Integer.toBinaryString(num);
+            return Long.toBinaryString(num);
         }
     }
 

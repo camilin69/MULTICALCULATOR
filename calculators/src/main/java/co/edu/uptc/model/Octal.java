@@ -28,4 +28,11 @@ public class Octal extends Expression{
         long division = num1 / num2;
         return Long.toString(division, 8);
     }
+
+    public String pow(String a, String b) {
+        int num1 = Integer.parseInt(a, 2);
+        int num2 = Integer.parseInt(b, 2);
+        int pow = (int) Math.pow(num1, num2);
+        return Long.toString(pow, 8);
+    }
 }

@@ -34,7 +34,7 @@ public class HandlingCalculator {
                         numbers.push(applyOperation(ex, operators.pop(), numbers.pop(), numbers.pop()));
                     }
                     operators.pop(); 
-                } else if (c == '+' || c == '-' || c == 'x' || c == '/') {
+                } else if (c == '+' || c == '-' || c == 'x' || c == '/'|| c == '^') {
                     while (!operators.isEmpty() && hasPrecedence(operators.peek(), c)) {
                         numbers.push(applyOperation(ex, operators.pop(), numbers.pop(), numbers.pop()));
                     }
@@ -65,12 +65,20 @@ public class HandlingCalculator {
             case '/':
                 if (Integer.parseInt(b, 16) == 0) throw new ArithmeticException("Division by zero impossible");
                 return ex.division(a, b);
+            case '^':
+                return ex.pow(a, b);
         }
         return "0";
     }
 
     private static boolean hasPrecedence(char op1, char op2) {
-        return (op1 != '(' && op1 != ')') && ((op1 == 'x' || op1 == '/') || (op2 == '+' || op2 == '-'));
+        if ((op1 == '(' || op1 == ')') || (op2 == '(' || op2 == ')')) {
+            return false;
+        }
+        if ((op1 == 'x' || op1 == '/' || op1 == '^') && (op2 == '+' || op2 == '-')) {
+            return true;
+        }
+        return (op1 == 'x' || op1 == '/' || op1 == '^') && (op2 == 'x' || op2 == '/' || op2 == '^');
     }
 
     private static boolean isValidExpression(String expression) {
@@ -80,7 +88,8 @@ public class HandlingCalculator {
                 if(!(i > 0 && expression.toCharArray()[i - 1] == '+'
                          || expression.toCharArray()[i - 1] == '-'
                          || expression.toCharArray()[i - 1] == 'x'
-                         || expression.toCharArray()[i - 1] == '/')){
+                         || expression.toCharArray()[i - 1] == '/'
+                         || expression.toCharArray()[i - 1] == '^')){
                             return false;
                         }
                 stack.push(expression.toCharArray()[i]);
@@ -95,7 +104,7 @@ public class HandlingCalculator {
             return false;
         }
 
-        return expression.matches("[0-9A-F+\\-x/().]*");
+        return expression.matches("[0-9A-F+\\-x/^().]*");
     }
 
 }

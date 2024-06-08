@@ -1,5 +1,7 @@
 package co.edu.uptc.control;
 
+import java.io.IOException;
+
 import co.edu.uptc.model.Binary;
 import co.edu.uptc.model.Expression;
 import co.edu.uptc.model.Hexa;
@@ -8,9 +10,14 @@ import javafx.animation.FadeTransition;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.animation.TranslateTransition;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.scene.control.MenuItem;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
@@ -19,11 +26,19 @@ import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 import javafx.scene.text.Font;
+import javafx.stage.Stage;
 import javafx.util.Duration;
 
 public class CalculatorView {
+
     private String ON_MOUSE_ENTERED_COLOR = "#937bbc";
     private String ON_MOUSE_EXITED_COLOR = "#c5b8da";
+
+    @FXML
+    private AnchorPane calculatorPane;
+
+    @FXML
+    private AnchorPane convertorPane;
 
     @FXML
     private AnchorPane griddys;
@@ -39,13 +54,19 @@ public class CalculatorView {
     private StackPane octalStack;
     @FXML
     private StackPane hexaStack;
+    @FXML
+    private StackPane convertorStack;
 
+    @FXML
+    private GridPane operationsGrid;
     @FXML
     private GridPane binaryGrid;
     @FXML
     private GridPane octalGrid;
     @FXML
     private GridPane hexaGrid;
+    @FXML
+    private GridPane convertorGrid;
 
 
     @FXML
@@ -128,6 +149,24 @@ public class CalculatorView {
     }
 
     @FXML
+    void convertorOp(MouseEvent event) {
+        if(operationsGrid.isVisible()){
+            convertorStack.setStyle("-fx-background-color: " + ON_MOUSE_ENTERED_COLOR + ";");
+            operationsGrid.setVisible(false);
+            convertorGrid.setVisible(true);
+        }else{
+            convertorStack.setStyle("-fx-background-color: " + ON_MOUSE_EXITED_COLOR + ";");
+            operationsGrid.setVisible(true);
+            convertorGrid.setVisible(false);
+
+        }
+        
+        operationField.setText(""); 
+        resultField.setText("=");
+    }
+
+
+    @FXML
     void addOperationField(MouseEvent event){
         StackPane stack = (StackPane) event.getSource();
         if(operationField.getText().length() >= 32 && operationField.getFont().getSize() > 30){
@@ -139,7 +178,7 @@ public class CalculatorView {
         }
 
     }
-//18 result
+    
     @FXML
     void remove(MouseEvent event){
         if(operationField.getText().length() <= 40 && operationField.getFont().getSize() < 66){
@@ -200,5 +239,10 @@ public class CalculatorView {
             error.play();
             fadeTransition.play();
         }
+    }
+
+    @FXML
+    void convert(MouseEvent event){
+        System.out.println("Convert tha nigga");
     }
 }
