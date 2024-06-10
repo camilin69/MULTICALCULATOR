@@ -1,4 +1,8 @@
 module co.edu.uptc {
     requires javafx.controls;
-    exports co.edu.uptc;
+    requires javafx.graphics;
+    requires javafx.media;
+    requires javafx.fxml;
+    opens co.edu.uptc.control;
+    opens co.edu.uptc.runner;
 }
