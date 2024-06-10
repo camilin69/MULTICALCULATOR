@@ -29,9 +29,22 @@ public class HandlingConvert {
                 }else if(hexaGrid.isVisible()){
                     return num;
                 }
+            case "toDec":
+                if(binaryGrid.isVisible()){
+                    return binToDec(num);
+                }else if(octalGrid.isVisible()){
+                    return octToDec(num);
+                }else if(hexaGrid.isVisible()){
+                    return hexToDec(num);
+                }
             default:
                 return "WTF NIGGA";
         }
+    }
+
+    private static String binToDec(String num){
+        Integer conv = Integer.parseInt(num, 2);
+        return Integer.toString(conv, 10);
     }
 
     private static String binToOct(String num){
@@ -44,6 +57,11 @@ public class HandlingConvert {
         return Integer.toString(conv, 16);
     }
 
+    private static String octToDec(String num){
+        Integer conv = Integer.parseInt(num, 8);
+        return Integer.toString(conv, 10);
+    }
+
     private static String octToBin(String num){
         Integer conv = Integer.parseInt(num, 8);
         return Integer.toString(conv, 2);
@@ -52,6 +70,11 @@ public class HandlingConvert {
     private static String octToHex(String num){
         Integer conv = Integer.parseInt(num, 8);
         return Integer.toString(conv, 16);
+    }
+
+    private static String hexToDec(String num){
+        Integer conv = Integer.parseInt(num, 16);
+        return Integer.toString(conv, 10);
     }
 
     private static String hexToBin(String num){

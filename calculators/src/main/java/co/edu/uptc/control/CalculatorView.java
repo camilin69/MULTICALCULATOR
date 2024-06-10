@@ -236,9 +236,12 @@ public class CalculatorView {
 
     @FXML
     void convert(MouseEvent event){
-        StackPane stack = (StackPane) event.getSource();
-        String op = ((Label)stack.getChildren().get(1)).getText();
-        String result = HandlingConvert.convert(operationField.getText(), op, binaryGrid, octalGrid, hexaGrid);
-        resultField.setText("= " + result);
+        if(!operationField.getText().isBlank()){
+            StackPane stack = (StackPane) event.getSource();
+            String op = ((Label)stack.getChildren().get(1)).getText();
+            String result = HandlingConvert.convert(operationField.getText(), op, binaryGrid, octalGrid, hexaGrid);
+            resultField.setText("= " + result);
+        }
+        
     }
 }
