@@ -589,14 +589,15 @@
                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                </rowConstraints>
                <children>
                   <StackPane onMouseClicked="#convert" prefHeight="100.0" prefWidth="150.0">
                      <children>
-                        <Circle fill="#c5b8da" radius="45.0" stroke="#c5b8da" strokeType="INSIDE" />
-                        <Label prefHeight="66.0" prefWidth="115.0" text="toBin" textFill="#4a0451">
+                        <Circle fill="#c5b8da" radius="35.0" stroke="#c5b8da" strokeType="INSIDE" />
+                        <Label prefHeight="62.0" prefWidth="95.0" text="toBin" textFill="#4a0451">
                            <font>
-                              <Font name="Gill Sans MT" size="40.0" />
+                              <Font name="Gill Sans MT" size="30.0" />
                            </font>
                            <padding>
                               <Insets bottom="10.0" left="15.0" />
@@ -607,12 +608,12 @@
                         </Label>
                      </children>
                   </StackPane>
-                  <StackPane onMouseClicked="#remove" prefHeight="100.0" prefWidth="150.0" GridPane.rowIndex="3">
+                  <StackPane onMouseClicked="#remove" prefHeight="100.0" prefWidth="150.0" GridPane.rowIndex="4">
                      <children>
-                        <Circle fill="#c5b8da" radius="45.0" stroke="#c5b8da" strokeType="INSIDE" />
-                        <Label prefHeight="72.0" prefWidth="64.0" text="DEL" textFill="#4a0451">
+                        <Circle fill="#c5b8da" radius="35.0" stroke="#c5b8da" strokeType="INSIDE" />
+                        <Label prefHeight="72.0" prefWidth="58.0" text="DEL" textFill="#4a0451">
                            <font>
-                              <Font name="Gill Sans MT" size="34.0" />
+                              <Font name="Gill Sans MT" size="30.0" />
                            </font>
                            <cursor>
                               <Cursor fx:constant="HAND" />
@@ -623,12 +624,44 @@
                         </Label>
                      </children>
                   </StackPane>
+                  <StackPane onMouseClicked="#convert" prefHeight="72.0" prefWidth="133.0">
+                     <children>
+                        <Circle fill="#c5b8da" radius="35.0" stroke="#c5b8da" strokeType="INSIDE" />
+                        <Label prefHeight="62.0" prefWidth="95.0" text="toDec" textFill="#4a0451">
+                           <font>
+                              <Font name="Gill Sans MT" size="25.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="10.0" left="15.0" />
+                           </padding>
+                           <StackPane.margin>
+                              <Insets top="10.0" />
+                           </StackPane.margin>
+                        </Label>
+                     </children>
+                  </StackPane>
                   <StackPane onMouseClicked="#convert" prefHeight="100.0" prefWidth="150.0" GridPane.rowIndex="1">
                      <children>
-                        <Circle fill="#c5b8da" radius="45.0" stroke="#c5b8da" strokeType="INSIDE" />
-                        <Label prefHeight="66.0" prefWidth="115.0" text="toOct" textFill="#4a0451">
+                        <Circle fill="#c5b8da" radius="35.0" stroke="#c5b8da" strokeType="INSIDE" />
+                        <Label prefHeight="62.0" prefWidth="95.0" text="toBin" textFill="#4a0451">
                            <font>
-                              <Font name="Gill Sans MT" size="34.0" />
+                              <Font name="Gill Sans MT" size="30.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="10.0" left="15.0" />
+                           </padding>
+                           <StackPane.margin>
+                              <Insets top="10.0" />
+                           </StackPane.margin>
+                        </Label>
+                     </children>
+                  </StackPane>
+                  <StackPane onMouseClicked="#convert" prefHeight="72.0" prefWidth="133.0" GridPane.rowIndex="1">
+                     <children>
+                        <Circle fill="#c5b8da" radius="35.0" stroke="#c5b8da" strokeType="INSIDE" />
+                        <Label prefHeight="62.0" prefWidth="95.0" text="toBin" textFill="#4a0451">
+                           <font>
+                              <Font name="Gill Sans MT" size="30.0" />
                            </font>
                            <padding>
                               <Insets bottom="10.0" left="15.0" />
@@ -641,10 +674,42 @@
                   </StackPane>
                   <StackPane onMouseClicked="#convert" prefHeight="100.0" prefWidth="150.0" GridPane.rowIndex="2">
                      <children>
-                        <Circle fill="#c5b8da" radius="45.0" stroke="#c5b8da" strokeType="INSIDE" />
-                        <Label prefHeight="66.0" prefWidth="118.0" text="toHex" textFill="#4a0451">
+                        <Circle fill="#c5b8da" radius="35.0" stroke="#c5b8da" strokeType="INSIDE" />
+                        <Label prefHeight="62.0" prefWidth="95.0" text="toBin" textFill="#4a0451">
                            <font>
-                              <Font name="Gill Sans MT" size="34.0" />
+                              <Font name="Gill Sans MT" size="30.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="10.0" left="15.0" />
+                           </padding>
+                           <StackPane.margin>
+                              <Insets top="10.0" />
+                           </StackPane.margin>
+                        </Label>
+                     </children>
+                  </StackPane>
+                  <StackPane onMouseClicked="#convert" prefHeight="72.0" prefWidth="133.0" GridPane.rowIndex="2">
+                     <children>
+                        <Circle fill="#c5b8da" radius="35.0" stroke="#c5b8da" strokeType="INSIDE" />
+                        <Label prefHeight="62.0" prefWidth="95.0" text="toOct" textFill="#4a0451">
+                           <font>
+                              <Font name="Gill Sans MT" size="25.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="10.0" left="15.0" />
+                           </padding>
+                           <StackPane.margin>
+                              <Insets top="10.0" />
+                           </StackPane.margin>
+                        </Label>
+                     </children>
+                  </StackPane>
+                  <StackPane onMouseClicked="#convert" prefHeight="72.0" prefWidth="133.0" GridPane.rowIndex="3">
+                     <children>
+                        <Circle fill="#c5b8da" radius="35.0" stroke="#c5b8da" strokeType="INSIDE" />
+                        <Label prefHeight="62.0" prefWidth="95.0" text="toHex" textFill="#4a0451">
+                           <font>
+                              <Font name="Gill Sans MT" size="25.0" />
                            </font>
                            <padding>
                               <Insets bottom="10.0" left="15.0" />
