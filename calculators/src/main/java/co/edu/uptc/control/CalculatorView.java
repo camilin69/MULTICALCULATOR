@@ -1,6 +1,5 @@
 package co.edu.uptc.control;
 
-import java.io.IOException;
 
 import co.edu.uptc.model.Binary;
 import co.edu.uptc.model.Expression;
@@ -10,14 +9,9 @@ import javafx.animation.FadeTransition;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.animation.TranslateTransition;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Label;
-import javafx.scene.control.MenuItem;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
@@ -26,7 +20,6 @@ import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 import javafx.scene.text.Font;
-import javafx.stage.Stage;
 import javafx.util.Duration;
 
 public class CalculatorView {
@@ -243,6 +236,9 @@ public class CalculatorView {
 
     @FXML
     void convert(MouseEvent event){
-        System.out.println("Convert tha nigga");
+        StackPane stack = (StackPane) event.getSource();
+        String op = ((Label)stack.getChildren().get(1)).getText();
+        String result = HandlingConvert.convert(operationField.getText(), op, binaryGrid, octalGrid, hexaGrid);
+        resultField.setText("= " + result);
     }
 }

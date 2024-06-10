@@ -3,8 +3,6 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
@@ -44,17 +42,20 @@
                   <StackPane onMouseClicked="#remove" prefHeight="100.0" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
                      <children>
                         <Circle fill="#c5b8da" radius="30.0" stroke="#c5b8da" strokeType="INSIDE" />
-                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@remove.png" />
-                           </image>
-                        </ImageView>
+                        <Label prefHeight="72.0" prefWidth="44.0" text="DEL" textFill="#4a0451">
+                           <font>
+                              <Font name="Gill Sans MT" size="25.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Label>
                      </children>
                   </StackPane>
                   <StackPane onMouseClicked="#addOperationField" prefHeight="100.0" prefWidth="150.0" GridPane.rowIndex="1">
                      <children>
                         <Circle fill="#c5b8da" radius="30.0" stroke="#c5b8da" strokeType="INSIDE" />
-                        <Label prefHeight="118.0" prefWidth="28.0" text="x" textFill="WHITE">
+                        <Label prefHeight="118.0" prefWidth="28.0" text="x" textFill="#4a0451">
                            <font>
                               <Font name="Ramaraja Regular" size="50.0" />
                            </font>
@@ -67,7 +68,7 @@
                   <StackPane onMouseClicked="#addOperationField" prefHeight="100.0" prefWidth="150.0" GridPane.rowIndex="2">
                      <children>
                         <Circle fill="#c5b8da" radius="30.0" stroke="#c5b8da" strokeType="INSIDE" />
-                        <Label prefHeight="118.0" prefWidth="28.0" text="+" textFill="WHITE">
+                        <Label prefHeight="118.0" prefWidth="28.0" text="+" textFill="#4a0451">
                            <font>
                               <Font name="Bauhaus 93" size="50.0" />
                            </font>
@@ -80,7 +81,7 @@
                   <StackPane onMouseClicked="#addOperationField" prefHeight="100.0" prefWidth="150.0" GridPane.columnIndex="1">
                      <children>
                         <Circle fill="#c5b8da" radius="30.0" stroke="#c5b8da" strokeType="INSIDE" />
-                        <Label prefHeight="8.0" prefWidth="28.0" text=")" textFill="WHITE">
+                        <Label prefHeight="8.0" prefWidth="28.0" text=")" textFill="#4a0451">
                            <font>
                               <Font name="Gill Sans MT" size="50.0" />
                            </font>
@@ -96,7 +97,7 @@
                   <StackPane onMouseClicked="#addOperationField" prefHeight="100.0" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
                      <children>
                         <Circle fill="#c5b8da" radius="30.0" stroke="#c5b8da" strokeType="INSIDE" />
-                        <Label prefHeight="118.0" prefWidth="28.0" text="-" textFill="WHITE">
+                        <Label prefHeight="118.0" prefWidth="28.0" text="-" textFill="#4a0451">
                            <font>
                               <Font name="Noto Mono" size="39.0" />
                            </font>
@@ -113,7 +114,7 @@
                               <Cursor fx:constant="HAND" />
                            </cursor>
                         </Circle>
-                        <Label prefHeight="118.0" prefWidth="28.0" text="^" textFill="WHITE">
+                        <Label prefHeight="118.0" prefWidth="28.0" text="^" textFill="#4a0451">
                            <font>
                               <Font name="Bauhaus 93" size="50.0" />
                            </font>
@@ -129,7 +130,7 @@
                   <StackPane onMouseClicked="#addOperationField" prefHeight="100.0" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
                      <children>
                         <Circle fill="#c5b8da" radius="30.0" stroke="#c5b8da" strokeType="INSIDE" />
-                        <Label prefHeight="118.0" prefWidth="28.0" text="/" textFill="WHITE">
+                        <Label prefHeight="118.0" prefWidth="28.0" text="/" textFill="#4a0451">
                            <font>
                               <Font name="Ramaraja Regular" size="50.0" />
                            </font>
@@ -142,7 +143,7 @@
                   <StackPane onMouseClicked="#addOperationField" prefHeight="100.0" prefWidth="150.0">
                      <children>
                         <Circle fill="#c5b8da" radius="30.0" stroke="#c5b8da" strokeType="INSIDE" />
-                        <Label prefHeight="8.0" prefWidth="28.0" text="(" textFill="WHITE">
+                        <Label prefHeight="8.0" prefWidth="28.0" text="(" textFill="#4a0451">
                            <font>
                               <Font name="Gill Sans MT" size="50.0" />
                            </font>
@@ -162,7 +163,7 @@
                               <Cursor fx:constant="HAND" />
                            </cursor>
                         </Circle>
-                        <Label prefHeight="118.0" prefWidth="28.0" text="=" textFill="WHITE">
+                        <Label prefHeight="118.0" prefWidth="28.0" text="=" textFill="#4a0451">
                            <font>
                               <Font name="Bauhaus 93" size="50.0" />
                            </font>
@@ -182,15 +183,15 @@
                               <Cursor fx:constant="HAND" />
                            </cursor>
                         </Circle>
-                        <Label prefHeight="118.0" prefWidth="28.0" text="AC" textFill="WHITE">
+                        <Label prefHeight="69.0" prefWidth="40.0" text="AC" textFill="#4a0451">
                            <font>
-                              <Font name="Gill Sans MT" size="20.0" />
+                              <Font name="Gill Sans MT" size="25.0" />
                            </font>
                            <cursor>
                               <Cursor fx:constant="HAND" />
                            </cursor>
                            <StackPane.margin>
-                              <Insets bottom="3.0" />
+                              <Insets bottom="3.0" left="5.0" />
                            </StackPane.margin>
                         </Label>
                      </children>
@@ -209,7 +210,7 @@
                   <StackPane onMouseClicked="#addOperationField" prefHeight="150.0" prefWidth="200.0">
                      <children>
                         <Circle fill="#c5b8da" radius="30.0" stroke="#c5b8da" strokeType="INSIDE" />
-                        <Label prefHeight="51.0" prefWidth="62.0" text="0">
+                        <Label prefHeight="51.0" prefWidth="62.0" text="0" textFill="WHITE">
                            <font>
                               <Font name="Gill Sans MT" size="50.0" />
                            </font>
@@ -222,7 +223,7 @@
                   <StackPane onMouseClicked="#addOperationField" prefHeight="150.0" prefWidth="200.0" GridPane.rowIndex="1">
                      <children>
                         <Circle fill="#c5b8da" radius="30.0" stroke="#c5b8da" strokeType="INSIDE" />
-                        <Label prefHeight="51.0" prefWidth="62.0" text="1">
+                        <Label prefHeight="51.0" prefWidth="62.0" text="1" textFill="WHITE">
                            <font>
                               <Font name="Gill Sans MT" size="50.0" />
                            </font>
@@ -249,7 +250,7 @@
                   <StackPane onMouseClicked="#addOperationField" prefHeight="150.0" prefWidth="200.0">
                      <children>
                         <Circle fill="#c5b8da" radius="30.0" stroke="#c5b8da" strokeType="INSIDE" />
-                        <Label prefHeight="51.0" prefWidth="62.0" text="3">
+                        <Label prefHeight="51.0" prefWidth="62.0" text="3" textFill="WHITE">
                            <font>
                               <Font name="Gill Sans MT" size="50.0" />
                            </font>
@@ -262,7 +263,7 @@
                   <StackPane onMouseClicked="#addOperationField" prefHeight="150.0" prefWidth="200.0" GridPane.rowIndex="1">
                      <children>
                         <Circle fill="#c5b8da" radius="30.0" stroke="#c5b8da" strokeType="INSIDE" />
-                        <Label prefHeight="51.0" prefWidth="62.0" text="2">
+                        <Label prefHeight="51.0" prefWidth="62.0" text="2" textFill="WHITE">
                            <font>
                               <Font name="Gill Sans MT" size="50.0" />
                            </font>
@@ -275,7 +276,7 @@
                   <StackPane onMouseClicked="#addOperationField" prefHeight="150.0" prefWidth="200.0" GridPane.rowIndex="2">
                      <children>
                         <Circle fill="#c5b8da" radius="30.0" stroke="#c5b8da" strokeType="INSIDE" />
-                        <Label prefHeight="51.0" prefWidth="62.0" text="1">
+                        <Label prefHeight="51.0" prefWidth="62.0" text="1" textFill="WHITE">
                            <font>
                               <Font name="Gill Sans MT" size="50.0" />
                            </font>
@@ -288,7 +289,7 @@
                   <StackPane onMouseClicked="#addOperationField" prefHeight="150.0" prefWidth="200.0" GridPane.rowIndex="3">
                      <children>
                         <Circle fill="#c5b8da" radius="30.0" stroke="#c5b8da" strokeType="INSIDE" />
-                        <Label prefHeight="51.0" prefWidth="62.0" text="0">
+                        <Label prefHeight="51.0" prefWidth="62.0" text="0" textFill="WHITE">
                            <font>
                               <Font name="Gill Sans MT" size="50.0" />
                            </font>
@@ -301,7 +302,7 @@
                   <StackPane onMouseClicked="#addOperationField" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="1">
                      <children>
                         <Circle fill="#c5b8da" radius="30.0" stroke="#c5b8da" strokeType="INSIDE" />
-                        <Label prefHeight="51.0" prefWidth="62.0" text="7">
+                        <Label prefHeight="51.0" prefWidth="62.0" text="7" textFill="WHITE">
                            <font>
                               <Font name="Gill Sans MT" size="50.0" />
                            </font>
@@ -314,7 +315,7 @@
                   <StackPane onMouseClicked="#addOperationField" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
                      <children>
                         <Circle fill="#c5b8da" radius="30.0" stroke="#c5b8da" strokeType="INSIDE" />
-                        <Label prefHeight="51.0" prefWidth="62.0" text="6">
+                        <Label prefHeight="51.0" prefWidth="62.0" text="6" textFill="WHITE">
                            <font>
                               <Font name="Gill Sans MT" size="50.0" />
                            </font>
@@ -327,7 +328,7 @@
                   <StackPane onMouseClicked="#addOperationField" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
                      <children>
                         <Circle fill="#c5b8da" radius="30.0" stroke="#c5b8da" strokeType="INSIDE" />
-                        <Label prefHeight="51.0" prefWidth="62.0" text="5">
+                        <Label prefHeight="51.0" prefWidth="62.0" text="5" textFill="WHITE">
                            <font>
                               <Font name="Gill Sans MT" size="50.0" />
                            </font>
@@ -340,7 +341,7 @@
                   <StackPane onMouseClicked="#addOperationField" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
                      <children>
                         <Circle fill="#c5b8da" radius="30.0" stroke="#c5b8da" strokeType="INSIDE" />
-                        <Label prefHeight="51.0" prefWidth="62.0" text="4">
+                        <Label prefHeight="51.0" prefWidth="62.0" text="4" textFill="WHITE">
                            <font>
                               <Font name="Gill Sans MT" size="50.0" />
                            </font>
@@ -369,7 +370,7 @@
                   <StackPane onMouseClicked="#addOperationField" prefHeight="150.0" prefWidth="200.0">
                      <children>
                         <Circle fill="#c5b8da" radius="30.0" stroke="#c5b8da" strokeType="INSIDE" />
-                        <Label prefHeight="51.0" prefWidth="62.0" text="3">
+                        <Label prefHeight="51.0" prefWidth="62.0" text="3" textFill="WHITE">
                            <font>
                               <Font name="Gill Sans MT" size="50.0" />
                            </font>
@@ -382,7 +383,7 @@
                   <StackPane onMouseClicked="#addOperationField" prefHeight="150.0" prefWidth="200.0" GridPane.rowIndex="1">
                      <children>
                         <Circle fill="#c5b8da" radius="30.0" stroke="#c5b8da" strokeType="INSIDE" />
-                        <Label prefHeight="51.0" prefWidth="62.0" text="2">
+                        <Label prefHeight="51.0" prefWidth="62.0" text="2" textFill="WHITE">
                            <font>
                               <Font name="Gill Sans MT" size="50.0" />
                            </font>
@@ -395,7 +396,7 @@
                   <StackPane onMouseClicked="#addOperationField" prefHeight="150.0" prefWidth="200.0" GridPane.rowIndex="2">
                      <children>
                         <Circle fill="#c5b8da" radius="30.0" stroke="#c5b8da" strokeType="INSIDE" />
-                        <Label prefHeight="51.0" prefWidth="62.0" text="1">
+                        <Label prefHeight="51.0" prefWidth="62.0" text="1" textFill="WHITE">
                            <font>
                               <Font name="Gill Sans MT" size="50.0" />
                            </font>
@@ -408,7 +409,7 @@
                   <StackPane onMouseClicked="#addOperationField" prefHeight="150.0" prefWidth="200.0" GridPane.rowIndex="3">
                      <children>
                         <Circle fill="#c5b8da" radius="30.0" stroke="#c5b8da" strokeType="INSIDE" />
-                        <Label prefHeight="51.0" prefWidth="62.0" text="0">
+                        <Label prefHeight="51.0" prefWidth="62.0" text="0" textFill="WHITE">
                            <font>
                               <Font name="Gill Sans MT" size="50.0" />
                            </font>
@@ -421,7 +422,7 @@
                   <StackPane onMouseClicked="#addOperationField" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="1">
                      <children>
                         <Circle fill="#c5b8da" radius="30.0" stroke="#c5b8da" strokeType="INSIDE" />
-                        <Label prefHeight="51.0" prefWidth="62.0" text="7">
+                        <Label prefHeight="51.0" prefWidth="62.0" text="7" textFill="WHITE">
                            <font>
                               <Font name="Gill Sans MT" size="50.0" />
                            </font>
@@ -434,7 +435,7 @@
                   <StackPane onMouseClicked="#addOperationField" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
                      <children>
                         <Circle fill="#c5b8da" radius="30.0" stroke="#c5b8da" strokeType="INSIDE" />
-                        <Label prefHeight="51.0" prefWidth="62.0" text="4">
+                        <Label prefHeight="51.0" prefWidth="62.0" text="4" textFill="WHITE">
                            <font>
                               <Font name="Gill Sans MT" size="50.0" />
                            </font>
@@ -447,7 +448,7 @@
                   <StackPane onMouseClicked="#addOperationField" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="3">
                      <children>
                         <Circle fill="#c5b8da" radius="30.0" stroke="#c5b8da" strokeType="INSIDE" />
-                        <Label prefHeight="51.0" prefWidth="62.0" text="8">
+                        <Label prefHeight="51.0" prefWidth="62.0" text="8" textFill="WHITE">
                            <font>
                               <Font name="Gill Sans MT" size="50.0" />
                            </font>
@@ -460,7 +461,7 @@
                   <StackPane onMouseClicked="#addOperationField" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="3">
                      <children>
                         <Circle fill="#c5b8da" radius="30.0" stroke="#c5b8da" strokeType="INSIDE" />
-                        <Label prefHeight="51.0" prefWidth="62.0" text="C">
+                        <Label prefHeight="51.0" prefWidth="62.0" text="C" textFill="WHITE">
                            <font>
                               <Font name="Gill Sans MT" size="50.0" />
                            </font>
@@ -473,7 +474,7 @@
                   <StackPane onMouseClicked="#addOperationField" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
                      <children>
                         <Circle fill="#c5b8da" radius="30.0" stroke="#c5b8da" strokeType="INSIDE" />
-                        <Label prefHeight="51.0" prefWidth="62.0" text="5">
+                        <Label prefHeight="51.0" prefWidth="62.0" text="5" textFill="WHITE">
                            <font>
                               <Font name="Gill Sans MT" size="50.0" />
                            </font>
@@ -486,7 +487,7 @@
                   <StackPane onMouseClicked="#addOperationField" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
                      <children>
                         <Circle fill="#c5b8da" radius="30.0" stroke="#c5b8da" strokeType="INSIDE" />
-                        <Label prefHeight="51.0" prefWidth="62.0" text="6">
+                        <Label prefHeight="51.0" prefWidth="62.0" text="6" textFill="WHITE">
                            <font>
                               <Font name="Gill Sans MT" size="50.0" />
                            </font>
@@ -499,7 +500,7 @@
                   <StackPane onMouseClicked="#addOperationField" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="2">
                      <children>
                         <Circle fill="#c5b8da" radius="30.0" stroke="#c5b8da" strokeType="INSIDE" />
-                        <Label prefHeight="51.0" prefWidth="62.0" text="B">
+                        <Label prefHeight="51.0" prefWidth="62.0" text="B" textFill="WHITE">
                            <font>
                               <Font name="Gill Sans MT" size="50.0" />
                            </font>
@@ -512,7 +513,7 @@
                   <StackPane onMouseClicked="#addOperationField" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="3">
                      <children>
                         <Circle fill="#c5b8da" radius="30.0" stroke="#c5b8da" strokeType="INSIDE" />
-                        <Label prefHeight="51.0" prefWidth="62.0" text="F">
+                        <Label prefHeight="51.0" prefWidth="62.0" text="F" textFill="WHITE">
                            <font>
                               <Font name="Gill Sans MT" size="50.0" />
                            </font>
@@ -525,7 +526,7 @@
                   <StackPane onMouseClicked="#addOperationField" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
                      <children>
                         <Circle fill="#c5b8da" radius="30.0" stroke="#c5b8da" strokeType="INSIDE" />
-                        <Label prefHeight="51.0" prefWidth="62.0" text="A">
+                        <Label prefHeight="51.0" prefWidth="62.0" text="A" textFill="WHITE">
                            <font>
                               <Font name="Gill Sans MT" size="50.0" />
                            </font>
@@ -541,7 +542,7 @@
                   <StackPane onMouseClicked="#addOperationField" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
                      <children>
                         <Circle fill="#c5b8da" radius="30.0" stroke="#c5b8da" strokeType="INSIDE" />
-                        <Label prefHeight="51.0" prefWidth="62.0" text="9">
+                        <Label prefHeight="51.0" prefWidth="62.0" text="9" textFill="WHITE">
                            <font>
                               <Font name="Gill Sans MT" size="50.0" />
                            </font>
@@ -554,7 +555,7 @@
                   <StackPane onMouseClicked="#addOperationField" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="1">
                      <children>
                         <Circle fill="#c5b8da" radius="30.0" stroke="#c5b8da" strokeType="INSIDE" />
-                        <Label prefHeight="51.0" prefWidth="62.0" text="E">
+                        <Label prefHeight="51.0" prefWidth="62.0" text="E" textFill="WHITE">
                            <font>
                               <Font name="Gill Sans MT" size="50.0" />
                            </font>
@@ -567,7 +568,7 @@
                   <StackPane onMouseClicked="#addOperationField" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="2">
                      <children>
                         <Circle fill="#c5b8da" radius="30.0" stroke="#c5b8da" strokeType="INSIDE" />
-                        <Label prefHeight="51.0" prefWidth="62.0" text="D">
+                        <Label prefHeight="51.0" prefWidth="62.0" text="D" textFill="WHITE">
                            <font>
                               <Font name="Gill Sans MT" size="50.0" />
                            </font>
@@ -587,14 +588,15 @@
                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                </rowConstraints>
                <children>
                   <StackPane onMouseClicked="#convert" prefHeight="100.0" prefWidth="150.0">
                      <children>
-                        <Circle fill="#c5b8da" radius="60.0" stroke="#c5b8da" strokeType="INSIDE" />
-                        <Label prefHeight="66.0" prefWidth="130.0" text="toBin" textFill="WHITE">
+                        <Circle fill="#c5b8da" radius="45.0" stroke="#c5b8da" strokeType="INSIDE" />
+                        <Label prefHeight="66.0" prefWidth="115.0" text="toBin" textFill="#4a0451">
                            <font>
-                              <Font name="Gill Sans MT" size="47.0" />
+                              <Font name="Gill Sans MT" size="40.0" />
                            </font>
                            <padding>
                               <Insets bottom="10.0" left="15.0" />
@@ -605,12 +607,28 @@
                         </Label>
                      </children>
                   </StackPane>
+                  <StackPane onMouseClicked="#remove" prefHeight="100.0" prefWidth="150.0" GridPane.rowIndex="3">
+                     <children>
+                        <Circle fill="#c5b8da" radius="45.0" stroke="#c5b8da" strokeType="INSIDE" />
+                        <Label prefHeight="72.0" prefWidth="64.0" text="DEL" textFill="#4a0451">
+                           <font>
+                              <Font name="Gill Sans MT" size="34.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <StackPane.margin>
+                              <Insets left="5.0" />
+                           </StackPane.margin>
+                        </Label>
+                     </children>
+                  </StackPane>
                   <StackPane onMouseClicked="#convert" prefHeight="100.0" prefWidth="150.0" GridPane.rowIndex="1">
                      <children>
-                        <Circle fill="#c5b8da" radius="60.0" stroke="#c5b8da" strokeType="INSIDE" />
-                        <Label prefHeight="66.0" prefWidth="151.0" text="toOct" textFill="WHITE">
+                        <Circle fill="#c5b8da" radius="45.0" stroke="#c5b8da" strokeType="INSIDE" />
+                        <Label prefHeight="66.0" prefWidth="115.0" text="toOct" textFill="#4a0451">
                            <font>
-                              <Font name="Gill Sans MT" size="47.0" />
+                              <Font name="Gill Sans MT" size="34.0" />
                            </font>
                            <padding>
                               <Insets bottom="10.0" left="15.0" />
@@ -623,10 +641,10 @@
                   </StackPane>
                   <StackPane onMouseClicked="#convert" prefHeight="100.0" prefWidth="150.0" GridPane.rowIndex="2">
                      <children>
-                        <Circle fill="#c5b8da" radius="60.0" stroke="#c5b8da" strokeType="INSIDE" />
-                        <Label prefHeight="66.0" prefWidth="159.0" text="toHex" textFill="WHITE">
+                        <Circle fill="#c5b8da" radius="45.0" stroke="#c5b8da" strokeType="INSIDE" />
+                        <Label prefHeight="66.0" prefWidth="118.0" text="toHex" textFill="#4a0451">
                            <font>
-                              <Font name="Gill Sans MT" size="45.0" />
+                              <Font name="Gill Sans MT" size="34.0" />
                            </font>
                            <padding>
                               <Insets bottom="10.0" left="15.0" />
@@ -645,7 +663,7 @@
          <children>
             <StackPane fx:id="binaryStack" onMouseClicked="#binaryOp" prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: #937bbc;">
                <children>
-                  <Label text="BINARY" textFill="WHITE">
+                  <Label text="BINARY" textFill="#4a0451">
                      <font>
                         <Font name="Gill Sans MT" size="15.0" />
                      </font>
@@ -660,7 +678,7 @@
             </StackPane>
             <StackPane fx:id="octalStack" onMouseClicked="#octalOp" prefHeight="10.0" prefWidth="200.0" style="-fx-background-color: #c5b8da;">
                <children>
-                  <Label text="OCTAL" textFill="WHITE">
+                  <Label text="OCTAL" textFill="#4a0451">
                      <font>
                         <Font name="Gill Sans MT" size="15.0" />
                      </font>
@@ -675,7 +693,7 @@
             </StackPane>
             <StackPane fx:id="hexaStack" onMouseClicked="#hexaOp" prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: #c5b8da;">
                <children>
-                  <Label text="HEXA" textFill="WHITE">
+                  <Label text="HEXA" textFill="#4a0451">
                      <font>
                         <Font name="Gill Sans MT" size="15.0" />
                      </font>
@@ -690,7 +708,7 @@
             </StackPane>
             <StackPane fx:id="convertorStack" onMouseClicked="#convertorOp" prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: #c5b8da;">
                <children>
-                  <Label text="CONVERTOR" textFill="WHITE">
+                  <Label text="CONVERTOR" textFill="#4a0451">
                      <font>
                         <Font name="Gill Sans MT" size="15.0" />
                      </font>

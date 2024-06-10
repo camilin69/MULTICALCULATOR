@@ -85,11 +85,13 @@ public class HandlingCalculator {
         Stack<Character> stack = new Stack<>();
         for(int i = 0; i < expression.toCharArray().length; i++){
             if(expression.toCharArray()[i] == '('){
-                if(!(i > 0 && expression.toCharArray()[i - 1] == '+'
+                if(i > 0 && !(expression.toCharArray()[i - 1] == '+'
                          || expression.toCharArray()[i - 1] == '-'
                          || expression.toCharArray()[i - 1] == 'x'
                          || expression.toCharArray()[i - 1] == '/'
-                         || expression.toCharArray()[i - 1] == '^')){
+                         || expression.toCharArray()[i - 1] == '^'
+                         || expression.toCharArray()[i - 1] == '('
+                         || expression.toCharArray()[i - 1] == ')')){
                             return false;
                         }
                 stack.push(expression.toCharArray()[i]);
